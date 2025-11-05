@@ -1,5 +1,5 @@
 /* ===============================
-   🎨 Generelle stiler
+   Generelle stiler
    =============================== */
 body {
     background: linear-gradient(90deg, #001a2e 0%, #000000 80%); /* Horisontal blå-til-svart gradient som gir dybde */
@@ -10,17 +10,17 @@ body {
 }
 
 /* ===============================
-   🔵 Navigasjonsmeny
+   Navigasjonsmeny
    =============================== */
 .nav_bar {
-    width: 80%; /* Gjør menyen litt smalere enn hele siden */
+    width: 60%; /* Gjør menyen litt smalere enn hele siden */
     height: 60px; /* Setter høyde på menyen */
     background-color: #006EB3; /* Blå bakgrunnsfarge */
     border-radius: 50px; /* Runde kanter for "pill"-form */
     display: flex; /* Aktiverer flexbox for justering */
     justify-content: center; /* Sentrerer elementene horisontalt */
     align-items: center; /* Sentrerer elementene vertikalt */
-    gap: 150px; /* Avstand mellom meny-elementene */
+    gap: 180px; /* Avstand mellom meny-elementene */
     margin: 20px auto; /* Sentrerer menyen og legger til litt toppmarg */
 }
 
@@ -31,7 +31,6 @@ body {
     color: white; /* Hvit tekstfarge */
     margin: 0; /* Fjerner ekstra luft rundt teksten */
     cursor: pointer; /* Gjør teksten klikkbar (viser håndpeker) */
-    
 }
 
 .nav_bar h1:hover {
@@ -39,46 +38,47 @@ body {
 }
 
 /* ===============================
-   🖼️ Hovedseksjon (profilområde)
+   Hovedseksjon (profilområde)
    =============================== */
 .Hero_stil {
+    position: relative;
     display: flex; /* Plasserer bilde og tekst side om side */
-    justify-content: center; /* Sentrerer hele seksjonen horisontalt */
     align-items: center; /* Sentrerer innholdet vertikalt */
     gap: 50px; /* Avstand mellom bilde og tekst */
     margin-top: 100px; /* Luft mellom meny og hovedinnhold */
     color: white; /* Tekstfarge */
+    left: 50px;
 }
 
 /* ===============================
-   👤 Profilbilde
+   Profilbilde
    =============================== */
 .Profil_bilde {
-    width: 250px; /* Bildebredde */
-    height: 250px; /* Bildehøyde */
+    width: 300px; /* Bildebredde */
+    height: 300px; /* Bildehøyde */
     border-radius: 50%; /* Gjør bildet rundt */
     object-fit: cover; /* Fyller formen uten å strekke bildet */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Myk skygge bak bildet */
 }
 
 /* ===============================
-   📝 Tekstområde
+   Tekstområde
    =============================== */
 .Forside_tekst h1 {
-    font-size: 50px; /* Stor overskrift for navnet ditt */
+    font-size: 60px; /* Stor overskrift for navnet ditt */
     margin-bottom: 10px; /* Litt luft under overskriften */
     margin-top: 0; /* Fjerner luft over overskriften */
 }
 
 .Forside_tekst p {
-    font-size: 22px; /* God lesbar tekststørrelse */
+    font-size: 25px; /* God lesbar tekststørrelse */
     margin-top: 0; /* Fjerner luft over teksten */
     margin-bottom: 30px; /* Litt luft under teksten */
     line-height: 1.4; /* Bedre linjeavstand for lesbarhet */
 }
 
 /* ===============================
-   🔘 Knapp ("Kontakt meg her")
+   Knapp ("Kontakt meg her")
    =============================== */
 .Kontakt_knapp {
     display: inline-block; /* Tillater padding og margin */
@@ -97,7 +97,7 @@ body {
 }
 
 /* ===============================
-   📱 Responsivt design (mobil og nettbrett)
+   Responsivt design (mobil og nettbrett)
    =============================== */
 
 /* For skjermer mindre enn 900px bredde */
