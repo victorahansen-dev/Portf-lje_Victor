@@ -1,5 +1,8 @@
 body {
-    background-color: black;
+    background: linear-gradient(90deg, #001a2e 0%, #000000 70%);
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
 }
 
 .nav_bar {
@@ -19,20 +22,43 @@ body {
 
 .Profil_bilde {
     /*Profil bilde for portefølje, border radius lager bildet til en sirkel*/
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     border-radius: 200px;
-    display: flex;
+    object-fit: cover;
 }
 
 .Hero_stil {
     /*Profil bilde og forside tekst*/
-    color: white;
     display: flex;
-    font-size: 200%;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    align-items: center;
     gap: 50px;
+    margin-top: 100px;
+    color: white;
 }
 
-.Forside_tekst {
+.Forside_tekst h1 {
+    /*margin-bottom for å ta vekk mellomrommet mellom tekstet til navnet og paragrafen*/
+    margin-bottom: 0px;
+    font-size: 75px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.Forside_tekst p {
+    /*margin-top for å ta vekk mellomrommet mellom tekstet til navnet og paragrafen*/
+    font-size: 30px;
+    margin-top: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.Kontakt_knapp {
+    display: inline-block;
+    background-color: #006EB3;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
