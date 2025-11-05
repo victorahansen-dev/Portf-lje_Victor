@@ -1,4 +1,38 @@
 body {
     background-color: black;
-    
+}
+
+.nav_bar {
+    /*Navigasjons bar */
+    width: 1370px;
+    height: 100px;
+    background-color: #006EB3;
+    border-radius: 50px;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    gap: 400px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+}
+
+.Profil_bilde {
+    /*Profil bilde for portefølje, border radius lager bildet til en sirkel*/
+    width: 300px;
+    height: 300px;
+    border-radius: 200px;
+    display: flex;
+}
+
+.Hero_stil {
+    /*Profil bilde og forside tekst*/
+    color: white;
+    display: flex;
+    font-size: 200%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    gap: 50px;
+}
+
+.Forside_tekst {
 }
