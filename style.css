@@ -1,64 +1,152 @@
+/* ===============================
+   🎨 Generelle stiler
+   =============================== */
 body {
-    background: linear-gradient(90deg, #001a2e 0%, #000000 70%);
-    color: white;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin: 0;
+    background: linear-gradient(90deg, #001a2e 0%, #000000 80%); /* Horisontal blå-til-svart gradient som gir dybde */
+    color: white; /* Hvit tekst */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Hovedfont */
+    margin: 0; /* Fjerner standard margin fra nettleseren */
+    padding: 0; /* Fjerner standard padding */
 }
 
+/* ===============================
+   🔵 Navigasjonsmeny
+   =============================== */
 .nav_bar {
-    /*Navigasjons bar */
-    width: 1370px;
-    height: 100px;
-    background-color: #006EB3;
-    border-radius: 50px;
-    display: flex;
-    justify-self: center;
-    justify-content: center;
-    gap: 400px;
-    color: white;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: larger;
+    width: 80%; /* Gjør menyen litt smalere enn hele siden */
+    height: 60px; /* Setter høyde på menyen */
+    background-color: #006EB3; /* Blå bakgrunnsfarge */
+    border-radius: 50px; /* Runde kanter for "pill"-form */
+    display: flex; /* Aktiverer flexbox for justering */
+    justify-content: center; /* Sentrerer elementene horisontalt */
+    align-items: center; /* Sentrerer elementene vertikalt */
+    gap: 150px; /* Avstand mellom meny-elementene */
+    margin: 20px auto; /* Sentrerer menyen og legger til litt toppmarg */
 }
 
-.Profil_bilde {
-    /*Profil bilde for portefølje, border radius lager bildet til en sirkel*/
-    width: 250px;
-    height: 250px;
-    border-radius: 200px;
-    object-fit: cover;
+/* Tekst i navigasjonsmenyen */
+.nav_bar h1 {
+    font-size: 35px; /* Tekststørrelse */
+    font-weight: bold; /* Fet skrift */
+    color: white; /* Hvit tekstfarge */
+    margin: 0; /* Fjerner ekstra luft rundt teksten */
+    cursor: pointer; /* Gjør teksten klikkbar (viser håndpeker) */
+    
 }
 
+.nav_bar h1:hover {
+    transform: scale(1.1); /* Liten zoom-effekt ved hover */
+}
+
+/* ===============================
+   🖼️ Hovedseksjon (profilområde)
+   =============================== */
 .Hero_stil {
-    /*Profil bilde og forside tekst*/
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    margin-top: 100px;
-    color: white;
+    display: flex; /* Plasserer bilde og tekst side om side */
+    justify-content: center; /* Sentrerer hele seksjonen horisontalt */
+    align-items: center; /* Sentrerer innholdet vertikalt */
+    gap: 50px; /* Avstand mellom bilde og tekst */
+    margin-top: 100px; /* Luft mellom meny og hovedinnhold */
+    color: white; /* Tekstfarge */
 }
 
+/* ===============================
+   👤 Profilbilde
+   =============================== */
+.Profil_bilde {
+    width: 250px; /* Bildebredde */
+    height: 250px; /* Bildehøyde */
+    border-radius: 50%; /* Gjør bildet rundt */
+    object-fit: cover; /* Fyller formen uten å strekke bildet */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Myk skygge bak bildet */
+}
+
+/* ===============================
+   📝 Tekstområde
+   =============================== */
 .Forside_tekst h1 {
-    /*margin-bottom for å ta vekk mellomrommet mellom tekstet til navnet og paragrafen*/
-    margin-bottom: 0px;
-    font-size: 75px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px; /* Stor overskrift for navnet ditt */
+    margin-bottom: 10px; /* Litt luft under overskriften */
+    margin-top: 0; /* Fjerner luft over overskriften */
 }
 
 .Forside_tekst p {
-    /*margin-top for å ta vekk mellomrommet mellom tekstet til navnet og paragrafen*/
-    font-size: 30px;
-    margin-top: 0;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 22px; /* God lesbar tekststørrelse */
+    margin-top: 0; /* Fjerner luft over teksten */
+    margin-bottom: 30px; /* Litt luft under teksten */
+    line-height: 1.4; /* Bedre linjeavstand for lesbarhet */
 }
 
+/* ===============================
+   🔘 Knapp ("Kontakt meg her")
+   =============================== */
 .Kontakt_knapp {
-    display: inline-block;
-    background-color: #006EB3;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 10px 25px;
-    border-radius: 25px;
-    font-size: 30px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: inline-block; /* Tillater padding og margin */
+    background-color: #006EB3; /* Knappens bakgrunnsfarge */
+    color: white; /* Hvit tekst */
+    font-weight: bold; /* Fet tekst */
+    text-decoration: none; /* Fjerner understrek */
+    padding: 10px 25px; /* Luft rundt teksten */
+    border-radius: 25px; /* Runde kanter */
+    font-size: 18px; /* Tekststørrelse */
+}
+
+.Kontakt_knapp:hover {
+    background-color: #0086D1; /* Lysere blå ved hover */
+    transform: scale(1.05); /* Liten zoom-effekt */
+}
+
+/* ===============================
+   📱 Responsivt design (mobil og nettbrett)
+   =============================== */
+
+/* For skjermer mindre enn 900px bredde */
+@media (max-width: 900px) {
+
+    .Hero_stil {
+        flex-direction: column; /* Legger bilde over teksten */
+        text-align: center; /* Sentrerer teksten */
+        margin-top: 60px; /* Mindre toppmarg */
+        gap: 30px; /* Mindre avstand mellom elementene */
+    }
+
+    .Profil_bilde {
+        width: 200px; /* Mindre bilde på mobil */
+        height: 200px;
+    }
+
+    .Forside_tekst h1 {
+        font-size: 36px; /* Mindre overskrift */
+    }
+
+    .Forside_tekst p {
+        font-size: 18px; /* Mindre brødtekst */
+    }
+
+    .nav_bar {
+        width: 90%; /* Passer mindre skjermer */
+        gap: 60px; /* Mindre avstand mellom lenkene */
+    }
+
+    .nav_bar h1 {
+        font-size: 16px; /* Mindre menytekst */
+    }
+}
+
+/* For veldig små skjermer (under 500px bredde) */
+@media (max-width: 500px) {
+    .nav_bar {
+        flex-direction: column; /* Legger menyen vertikalt */
+        height: auto; /* Justerer høyden automatisk */
+        padding: 10px 0;
+        gap: 20px; /* Mindre mellomrom mellom punktene */
+    }
+
+    .Hero_stil {
+        gap: 20px; /* Kompakt layout */
+    }
+
+    .Forside_tekst h1 {
+        font-size: 28px; /* Mindre overskrift for små skjermer */
+    }
 }
