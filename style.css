@@ -2,7 +2,7 @@
    Generelle stiler
    =============================== */
 body {
-    background: linear-gradient(90deg, #001a2e 0%, #000000 80%); /* Horisontal blå-til-svart gradient som gir dybde */
+    background: linear-gradient(90deg, #001a2e 0%, #000000 80%); /* Horisontal blå-til-svart gradient*/
     color: white; /* Hvit tekst */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Hovedfont */
     margin: 0; /* Fjerner standard margin fra nettleseren */
