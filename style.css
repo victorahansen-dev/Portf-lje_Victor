@@ -1,6 +1,7 @@
 /* ===============================
    Generelle stiler
    =============================== */
+
 body {
     background: linear-gradient(90deg, #001a2e 0%, #000000 80%); /* Horisontal blå-til-svart gradient*/
     color: white; /* Hvit tekst */
@@ -10,49 +11,57 @@ body {
 }
 
 /* ===============================
+   Forside
+   =============================== */
+
+/* ===============================
    Navigasjonsmeny
    =============================== */
+
 .nav_bar {
     width: 60%; /* Gjør menyen litt smalere enn hele siden */
     height: 60px; /* Setter høyde på menyen */
     background-color: #006EB3; /* Blå bakgrunnsfarge */
-    border-radius: 50px; /* Runde kanter for "pill"-form */
+    border-radius: 50px; /* Runde kanter */
     display: flex; /* Aktiverer flexbox for justering */
     justify-content: center; /* Sentrerer elementene horisontalt */
     align-items: center; /* Sentrerer elementene vertikalt */
-    gap: 180px; /* Avstand mellom meny-elementene */
-    margin: 20px auto; /* Sentrerer menyen og legger til litt toppmarg */
+    gap: 140px; /* Avstand mellom meny-elementene */
+    margin: 1% auto; /* Sentrerer menyen og legger til litt toppmarg */
 }
 
 /* Tekst i navigasjonsmenyen */
-.nav_bar h1 {
+.nav_bar a {
     font-size: 35px; /* Tekststørrelse */
     font-weight: bold; /* Fet skrift */
-    color: white; /* Hvit tekstfarge */
     margin: 0; /* Fjerner ekstra luft rundt teksten */
     cursor: pointer; /* Gjør teksten klikkbar (viser håndpeker) */
+    text-decoration: none; /* Fjerner understrek */
+    color: white; /* hvit tekst */
 }
 
-.nav_bar h1:hover {
+.nav_bar a:hover {
     transform: scale(1.1); /* Liten zoom-effekt ved hover */
 }
 
 /* ===============================
    Hovedseksjon (profilområde)
    =============================== */
+
 .Hero_stil {
-    position: relative;
+    position: relative; /* lar den flytte seg rundt */
     display: flex; /* Plasserer bilde og tekst side om side */
     align-items: center; /* Sentrerer innholdet vertikalt */
     gap: 50px; /* Avstand mellom bilde og tekst */
     margin-top: 100px; /* Luft mellom meny og hovedinnhold */
-    color: white; /* Tekstfarge */
-    left: 50px;
+    left: 50px; /* dytter den venstre */
+    top: 150px; /* dytter den nedover */
 }
 
 /* ===============================
    Profilbilde
    =============================== */
+
 .Profil_bilde {
     width: 300px; /* Bildebredde */
     height: 300px; /* Bildehøyde */
@@ -64,8 +73,9 @@ body {
 /* ===============================
    Tekstområde
    =============================== */
+
 .Forside_tekst h1 {
-    font-size: 60px; /* Stor overskrift for navnet ditt */
+    font-size: 60px; /* Stor overskrift for navn */
     margin-bottom: 10px; /* Litt luft under overskriften */
     margin-top: 0; /* Fjerner luft over overskriften */
 }
@@ -83,12 +93,12 @@ body {
 .Kontakt_knapp {
     display: inline-block; /* Tillater padding og margin */
     background-color: #006EB3; /* Knappens bakgrunnsfarge */
-    color: white; /* Hvit tekst */
     font-weight: bold; /* Fet tekst */
     text-decoration: none; /* Fjerner understrek */
     padding: 10px 25px; /* Luft rundt teksten */
     border-radius: 25px; /* Runde kanter */
     font-size: 18px; /* Tekststørrelse */
+    color: white; /* hvit tekst */
 }
 
 .Kontakt_knapp:hover {
@@ -97,56 +107,127 @@ body {
 }
 
 /* ===============================
-   Responsivt design (mobil og nettbrett)
+   Om meg
    =============================== */
 
-/* For skjermer mindre enn 900px bredde */
-@media (max-width: 900px) {
 
-    .Hero_stil {
-        flex-direction: column; /* Legger bilde over teksten */
-        text-align: center; /* Sentrerer teksten */
-        margin-top: 60px; /* Mindre toppmarg */
-        gap: 30px; /* Mindre avstand mellom elementene */
-    }
-
-    .Profil_bilde {
-        width: 200px; /* Mindre bilde på mobil */
-        height: 200px;
-    }
-
-    .Forside_tekst h1 {
-        font-size: 36px; /* Mindre overskrift */
-    }
-
-    .Forside_tekst p {
-        font-size: 18px; /* Mindre brødtekst */
-    }
-
-    .nav_bar {
-        width: 90%; /* Passer mindre skjermer */
-        gap: 60px; /* Mindre avstand mellom lenkene */
-    }
-
-    .nav_bar h1 {
-        font-size: 16px; /* Mindre menytekst */
-    }
+/* tekst boks */
+.container {
+    height: 90vh;
+    width: 600px;
+    display: flex;
+    justify-self: center;
+    align-items: center;
 }
 
-/* For veldig små skjermer (under 500px bredde) */
-@media (max-width: 500px) {
-    .nav_bar {
-        flex-direction: column; /* Legger menyen vertikalt */
-        height: auto; /* Justerer høyden automatisk */
-        padding: 10px 0;
-        gap: 20px; /* Mindre mellomrom mellom punktene */
-    }
+.Om_meg_tekst {
+    border: 5px solid #006EB3; /* Blå ramme */
+    border-radius: 25px; /* Runde hjørner */
+    display: flex;
+    flex-direction: column; /* Plasserer tekstene over hverandre */
+    justify-content: center; /* Sentrer tekstene vertikalt i boksen */
+    align-items: center; /* Sentrer tekstene horisontalt */
+    text-align: center; /* Midtstilt tekst */
+}
 
-    .Hero_stil {
-        gap: 20px; /* Kompakt layout */
-    }
+.Om_meg_tekst h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    margin-bottom: 50px;
+}
 
-    .Forside_tekst h1 {
-        font-size: 28px; /* Mindre overskrift for små skjermer */
-    }
+.Om_meg_tekst h2 {
+    font-size: 35px;
+    margin-top: 0;
+}
+
+/* ===============================
+   Prosjekter
+   =============================== */
+
+.Oslo_lacrosse_container {
+  position: relative; /* Lar deg posisjonere elementer inni hvis du trenger */
+  text-align: center; /* Sentrerer tekst og bilder horisontalt */
+  margin-top: 50px; /* Litt luft over seksjonen */
+}
+
+.Oslo_lacrosse_tekst {
+    font-size: 30px; /* Stor og tydelig tittel */
+    margin-bottom: 40px; /* Luft mellom tittel og bilder */
+}
+
+.Oslo_lacrosse_bilder {
+    display: flex; /* Plasserer bildene ved siden av hverandre */
+    justify-content: center; /* Sentrerer dem på midten av siden */
+    gap: 50px; /* Avstand mellom bildene */
+}
+
+/* Selve bildene */
+.Oslo_lacrosse_bilder img {
+  width: 800px; /* Fast bredde */
+  height: 400px; /* Fast høyde */
+  border-radius: 10px; /* Runde hjørner på bildene */
+  object-fit: cover;
+}
+
+.Html_tekst {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.Nav_bar_oppgave_container {
+  position: relative; /* Lar deg posisjonere elementer inni hvis du trenger */
+  text-align: center; /* Sentrerer tekst og bilder horisontalt */
+  margin-top: 50px; /* Litt luft over seksjonen */
+}
+
+.Nav_bar_oppgave_tekst {
+    font-size: 30px; /* Stor og tydelig tittel */
+    margin-bottom: 40px; /* Luft mellom tittel og bilder */
+}
+
+.Nav_bar_oppgave_bilder {
+    display: flex; /* Plasserer bildene ved siden av hverandre */
+    justify-content: center; /* Sentrerer dem på midten av siden */
+    gap: 50px; /* Avstand mellom bildene */
+}
+
+/* Selve bildene */
+.Nav_bar_oppgave_bilder img {
+  width: 800px; /* Fast bredde */
+  height: 400px; /* Fast høyde */
+  border-radius: 10px; /* Runde hjørner på bildene */
+  object-fit: cover;
+}
+
+/* ===============================
+   Footer
+   =============================== */
+
+.footer {
+  text-align: center; /* Sentrert tekst */
+  font-size: 18px; /*tekst størrelse */
+  padding: 20px 0; /* Luft over og under teksten */
+}
+
+.footer_forside {
+    position: relative;
+    bottom: -480px;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px 0;
+}
+
+.Medie_tekst {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.Overskrift_prosjekter {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
 }
