@@ -6,18 +6,15 @@ body {
     background: linear-gradient(90deg, #001a2e 0%, #000000 80%); /* Horisontal blå-til-svart gradient*/
     color: white; /* Hvit tekst */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Hovedfont */
-    margin: 0; /* Fjerner standard margin fra nettleseren */
+    margin: 0; /* Fjerner standard margin */
     padding: 0; /* Fjerner standard padding */
 }
 
-/* ===============================
-   Forside
-   =============================== */
 
 /* ===============================
    Navigasjonsmeny
    =============================== */
-
+    
 .nav_bar {
     width: 60%; /* Gjør menyen litt smalere enn hele siden */
     height: 60px; /* Setter høyde på menyen */
@@ -26,7 +23,7 @@ body {
     display: flex; /* Aktiverer flexbox for justering */
     justify-content: center; /* Sentrerer elementene horisontalt */
     align-items: center; /* Sentrerer elementene vertikalt */
-    gap: 140px; /* Avstand mellom meny-elementene */
+    gap: 200px; /* Avstand mellom meny-elementene */
     margin: 1% auto; /* Sentrerer menyen og legger til litt toppmarg */
 }
 
@@ -40,9 +37,17 @@ body {
     color: white; /* hvit tekst */
 }
 
+
+
+
+
 .nav_bar a:hover {
     transform: scale(1.1); /* Liten zoom-effekt ved hover */
 }
+
+/* ===============================
+   Forside
+   =============================== */
 
 /* ===============================
    Hovedseksjon (profilområde)
@@ -54,7 +59,7 @@ body {
     align-items: center; /* Sentrerer innholdet vertikalt */
     gap: 50px; /* Avstand mellom bilde og tekst */
     margin-top: 100px; /* Luft mellom meny og hovedinnhold */
-    left: 50px; /* dytter den venstre */
+    margin-left: 50px; /* dytter den venstre */
     top: 150px; /* dytter den nedover */
 }
 
@@ -113,11 +118,10 @@ body {
 
 /* tekst boks */
 .container {
-    height: 90vh;
-    width: 600px;
+    margin-top: 10%; /* dytter boksen nedover for å ikke ligge rett under nav-baren*/
+    width: 600px; /*bredde på boksen*/
     display: flex;
-    justify-self: center;
-    align-items: center;
+    justify-self: center; /*putter boken i midten horisontalt*/
 }
 
 .Om_meg_tekst {
@@ -146,6 +150,27 @@ body {
    Prosjekter
    =============================== */
 
+.Html_tekst {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.Medie_tekst {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.Overskrift_prosjekter {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+/* Oslo lacrosse */
+
 .Oslo_lacrosse_container {
   position: relative; /* Lar deg posisjonere elementer inni hvis du trenger */
   text-align: center; /* Sentrerer tekst og bilder horisontalt */
@@ -153,7 +178,7 @@ body {
 }
 
 .Oslo_lacrosse_tekst {
-    font-size: 30px; /* Stor og tydelig tittel */
+    font-size: 40px; /* Stor og tydelig tittel */
     margin-bottom: 40px; /* Luft mellom tittel og bilder */
 }
 
@@ -165,17 +190,12 @@ body {
 
 /* Selve bildene */
 .Oslo_lacrosse_bilder img {
-  width: 800px; /* Fast bredde */
+  width: 750px; /* Fast bredde */
   height: 400px; /* Fast høyde */
-  border-radius: 10px; /* Runde hjørner på bildene */
-  object-fit: cover;
+  border-radius: 20px; /* Runde hjørner på bildene */
 }
 
-.Html_tekst {
-    display: flex;
-    justify-content: center;
-    font-size: 20px;
-}
+/* Nav bar oppgave */
 
 .Nav_bar_oppgave_container {
   position: relative; /* Lar deg posisjonere elementer inni hvis du trenger */
@@ -184,7 +204,7 @@ body {
 }
 
 .Nav_bar_oppgave_tekst {
-    font-size: 30px; /* Stor og tydelig tittel */
+    font-size: 40px; /* Stor og tydelig tittel */
     margin-bottom: 40px; /* Luft mellom tittel og bilder */
 }
 
@@ -196,10 +216,35 @@ body {
 
 /* Selve bildene */
 .Nav_bar_oppgave_bilder img {
-  width: 800px; /* Fast bredde */
+  width: 750px; /* Fast bredde */
   height: 400px; /* Fast høyde */
-  border-radius: 10px; /* Runde hjørner på bildene */
-  object-fit: cover;
+  border-radius: 20px; /* Runde hjørner på bildene */
+}
+
+/* oppdrag 2 */
+
+.Oppdrag_2_container {
+  position: relative; /* Lar deg posisjonere elementer inni hvis du trenger */
+  text-align: center; /* Sentrerer tekst og bilder horisontalt */
+  margin-top: 50px; /* Litt luft over seksjonen */
+}
+
+.Oppdrag_2_oppgave_tekst {
+    font-size: 40px; /* Stor og tydelig tittel */
+    margin-bottom: 40px; /* Luft mellom tittel og bilder */
+}
+
+.Oppdrag_2_oppgave_bilder {
+    display: flex; /* Plasserer bildene ved siden av hverandre */
+    
+}
+
+/* Selve bildene */
+.Oppdrag_2_bilder img {
+  background-color: white; /* hvit bakgrunn på logo */
+  width: 800px; /* Fast bredde */
+  height: 320px; /* Fast høyde */
+  border-radius: 20px; /* Runde hjørner på bildene */
 }
 
 /* ===============================
@@ -207,27 +252,18 @@ body {
    =============================== */
 
 .footer {
-  text-align: center; /* Sentrert tekst */
-  font-size: 18px; /*tekst størrelse */
-  padding: 20px 0; /* Luft over og under teksten */
+    bottom: 0;
+    width: 100%;
+    text-align: center; /* Sentrert tekst */
+    font-size: 18px; /*tekst størrelse */
+    padding: 20px 0; /* Luft over og under teksten */
 }
 
 .footer_forside {
-    position: relative;
-    bottom: -480px;
-    text-align: center;
-    font-size: 18px;
-    padding: 20px 0;
-}
-
-.Medie_tekst {
-    display: flex;
-    justify-content: center;
-    font-size: 20px;
-}
-
-.Overskrift_prosjekter {
-    display: flex;
-    justify-content: center;
-    font-size: 25px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center; /* Sentrert tekst */
+    font-size: 18px; /*tekst størrelse */
+    padding: 20px 0; /* Luft over og under teksten */
 }
