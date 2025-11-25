@@ -16,6 +16,24 @@
         <a href="Om_Meg.html">Om meg</a>
     </nav>
 
+    <div class="Overskrift_Kontakt">
+        <h1>kontakt meg</h1>
+    </div>
+<form class="form" method="POST"> <!-- Starter et skjema som sender data med POST-metoden -->
+    
+    <label class="Tekstboks_overskrift" for="name">Navn:</label> <!-- Etikett for navnefeltet -->
+    <input class="Tekstboks_plasseringsholder" type="text" name="navn" required placeholder="Ditt navn" /> <!-- Tekstfelt for brukerens navn -->
+
+    <label class="Tekstboks_overskrift" for="email">Email:</label> <!-- Etikett for e-postfeltet -->
+    <input class="Tekstboks_plasseringsholder" type="email" name="email" required placeholder="email@domain.com" /> <!-- E-postfelt -->
+
+    <label class="Tekstboks_overskrift" for="kommentar">kommentar:</label> <!-- Etikett for kommentarfeltet -->
+    <textarea class="Tekstboks_skrift" name="kommentar" required placeholder="skriv ett kommentar"></textarea> <!-- Flerlinjet felt for å skrive en kommentar -->
+    <button type="submit">Send inn</button> <!-- Knapp som sender inn skjemaet -->
+
+</form> <!-- Avslutter skjemaet -->
+
+    </div>
     <footer class="footer">
         <p>© 2025 | Laget av Victor</p>
     </footer>
