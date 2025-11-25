@@ -258,19 +258,21 @@ body {
     font-size: 25px;
    }
 
-      .form {
+    .form {
         max-width: 600px;
         height: 380px;
         margin: 20px auto;
         padding: 20px;
-        border: 1px solid #ccc;
+        border: 1px solid white;
         border-radius: 8px;
     }
+
     .Tekstboks_overskrift {
         display: block;
         margin-bottom: 5px;
         font-weight: bold;
     }
+
     .Tekstboks_plasseringsholder[type="text"],
 
     .Tekstboks_plasseringsholder[type="email"],
@@ -279,10 +281,11 @@ body {
         width: 100%;
         padding: 10px;
         margin-bottom: 50px;
-        border: 1px solid #ddd;
+        border: 1px solid white;
         border-radius: 4px;
         box-sizing: border-box;
     }
+
 /* ===============================
    Footer
    =============================== */
