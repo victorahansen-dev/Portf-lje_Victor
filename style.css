@@ -10,20 +10,19 @@ body {
     padding: 0; /* Fjerner standard padding */
 }
 
-
 /* ===============================
    Navigasjonsmeny
    =============================== */
     
 .nav_bar {
-    width: 60%; /* Gjør menyen litt smalere enn hele siden */
+    width: 55%; /* Gjør menyen litt smalere enn hele siden */
     height: 60px; /* Setter høyde på menyen */
     background-color: #006EB3; /* Blå bakgrunnsfarge */
     border-radius: 50px; /* Runde kanter */
     display: flex; /* Aktiverer flexbox for justering */
-    justify-content: center; /* Sentrerer elementene horisontalt */
+    text-align: center; /* Sentrerer elementene horisontalt */
     align-items: center; /* Sentrerer elementene vertikalt */
-    gap: 200px; /* Avstand mellom meny-elementene */
+    gap: 130px; /* Avstand mellom meny-elementene */
     margin: 1% auto; /* Sentrerer menyen og legger til litt toppmarg */
 }
 
@@ -37,9 +36,10 @@ body {
     color: white; /* hvit tekst */
 }
 
-
-
-
+.nav_bar img {
+    width: 100px;
+    height: 50px;
+}
 
 .nav_bar a:hover {
     transform: scale(1.1); /* Liten zoom-effekt ved hover */
@@ -59,7 +59,7 @@ body {
     align-items: center; /* Sentrerer innholdet vertikalt */
     gap: 50px; /* Avstand mellom bilde og tekst */
     margin-top: 100px; /* Luft mellom meny og hovedinnhold */
-    margin-left: 50px; /* dytter den venstre */
+    margin-left: 1vh; /* dytter den venstre */
     top: 150px; /* dytter den nedover */
 }
 
@@ -112,16 +112,63 @@ body {
 }
 
 /* ===============================
+   For telefon (forside og navbar)
+   =============================== */
+
+@media (max-width: 500px) {
+    .nav_bar {
+        gap: 22px; /* Mindre mellomrom mellom punktene for mer kompakt design */
+        width: 95%; /* bredde på nav-baren med litt mellomrom på hver side */
+    }
+
+        .Hero_stil {
+        flex-direction: column;
+        /* Legger bilde over teksten */
+        text-align: center;
+        /* Sentrerer teksten */
+        margin-top: 60px;
+        /* Mindre toppmarg */
+        gap: 40px;
+        /* Mindre avstand mellom elementene */
+    }
+ 
+    .nav_bar img {
+    width: 70px;
+    height: 40px;
+    }
+
+    .Profil_bilde {
+        width: 200px;
+        /* Mindre bilde på mobil */
+        height: 200px;
+    }
+ 
+    .Forside_tekst h1 {
+        font-size: 36px;
+        /* Mindre overskrift */
+    }
+ 
+    .Forside_tekst p {
+        font-size: 18px;
+        /* Mindre brødtekst */
+    }
+
+    .nav_bar a {
+        font-size: 25px;
+        /* Mindre menytekst */
+    }
+}
+
+/* ===============================
    Om meg
    =============================== */
 
-
 /* tekst boks */
 .container {
-    margin-top: 10%; /* dytter boksen nedover for å ikke ligge rett under nav-baren*/
-    width: 600px; /*bredde på boksen*/
+    margin-top: 8%; /* dytter boksen nedover for å ikke ligge rett under nav-baren*/
+    width: 600px; /* bredde på boksen */
     display: flex;
-    justify-self: center; /*putter boken i midten horisontalt*/
+    justify-self: center; /* putter boken i midten horisontalt */
 }
 
 /*innhold*/
@@ -133,18 +180,42 @@ body {
     justify-content: center; /* Sentrer tekstene vertikalt i boksen */
     align-items: center; /* Sentrer tekstene horisontalt */
     text-align: center; /* Midtstilt tekst */
+    font-size: 35px; /* skriftstørrelse */
+    line-height: 1.1; /* avstand mellom tekst */
 }
 
 .Om_meg_tekst h1 {
     display: flex;
     justify-content: center;
     font-size: 50px;
+    margin-bottom: 20px;
+}
+
+/* ===============================
+   For telefon
+   =============================== */
+
+@media (max-width: 500px) {
+    .container {
+    margin-top: 25%; /* dytter boksen nedover for å ikke ligge rett under nav-baren*/
+    width: 400px; /* bredde på boksen */
+    display: flex;
+    justify-self: center; /* putter boken i midten horisontalt */
+}
+
+.Om_meg_tekst h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
     margin-bottom: 50px;
 }
 
 .Om_meg_tekst h2 {
-    font-size: 35px;
+    font-size: 25px;
     margin-top: 0;
+    line-height: 1.4;
+}
+
 }
 
 /* ===============================
@@ -223,7 +294,6 @@ body {
 }
 
 /* oppdrag 2 */
-
 .Oppdrag_2_container {
   position: relative; /* Lar deg posisjonere elementer inni hvis du trenger */
   text-align: center; /* Sentrerer tekst og bilder horisontalt */
@@ -249,6 +319,107 @@ body {
 }
 
 /* ===============================
+   For telefon
+   =============================== */
+
+@media (max-width: 500px) {
+    .Html_tekst {
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.Medie_tekst {
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.Overskrift_prosjekter {
+    display: flex;
+    justify-content: center;
+    font-size: 13px;
+    text-decoration: underline;
+}
+
+/* Oslo lacrosse */
+
+.Oslo_lacrosse_container {
+  position: relative; /* Lar deg posisjonere elementer inni hvis du trenger */
+  text-align: center; /* Sentrerer tekst og bilder horisontalt */
+  margin-top: 50px; /* Litt luft over seksjonen */
+}
+
+.Oslo_lacrosse_tekst {
+    font-size: 30px; /* Mindre tittel */
+    margin-bottom: 40px; /* Luft mellom tittel og bilder */
+}
+
+.Oslo_lacrosse_bilder {
+    display: flex; /* Plasserer bildene ved siden av hverandre */
+    flex-direction: column;
+    justify-self: center; /* Sentrerer dem på midten av siden */
+    gap: 50px; /* Avstand mellom bildene */
+}
+
+/* Selve bildene */
+.Oslo_lacrosse_bilder img {
+  width: 350px; /* Fast bredde */
+  height: 220px; /* Fast høyde */
+  border-radius: 20px; /* Runde hjørner på bildene */
+}
+
+/* Nav bar oppgave */
+
+.Nav_bar_oppgave_container {
+  position: relative; /* Lar deg posisjonere elementer inni hvis du trenger */
+  text-align: center; /* Sentrerer tekst og bilder horisontalt */
+  margin-top: 50px; /* Litt luft over seksjonen */
+}
+
+.Nav_bar_oppgave_tekst {
+    font-size: 30px; /* Mindre tittel */
+    margin-bottom: 40px; /* Luft mellom tittel og bilder */
+}
+
+.Nav_bar_oppgave_bilder {
+    display: flex; /* Plasserer bildene ved siden av hverandre */
+    flex-direction: column;
+    justify-self: center; /* Sentrerer dem på midten av siden */
+    gap: 50px; /* Avstand mellom bildene */
+}
+
+/* Selve bildene */
+.Nav_bar_oppgave_bilder img {
+  width: 350px; /* Fast bredde */
+  height: 220px; /* Fast høyde */
+  border-radius: 20px; /* Runde hjørner på bildene */
+}
+
+/* oppdrag 2 */
+
+.Oppdrag_2_container {
+  position: relative; /* Lar deg posisjonere elementer inni hvis du trenger */
+  text-align: center; /* Sentrerer tekst og bilder horisontalt */
+  margin-top: 50px; /* Litt luft over seksjonen */
+  font-size: 13px; /* mindre titell */
+}
+
+.Oppdrag_2_oppgave_bilder {
+    display: flex; /* Plasserer bildene ved siden av hverandre */
+}
+
+/* Selve bildene */
+.Oppdrag_2_bilder img {
+  background-color: white; /* hvit bakgrunn på logo */
+  width: 350px; /* Fast bredde */
+  height: 150px; /* Fast høyde */
+  border-radius: 20px; /* Runde hjørner på bildene */
+}
+
+}
+
+/* ===============================
    Kontakt
    =============================== */
 
@@ -258,7 +429,7 @@ body {
     font-size: 25px;
    }
 
-    .form {
+   .form {
         max-width: 600px;
         height: 380px;
         margin: 20px auto;
@@ -266,17 +437,17 @@ body {
         border: 1px solid white;
         border-radius: 8px;
     }
-
+ 
     .Tekstboks_overskrift {
         display: block;
         margin-bottom: 5px;
         font-weight: bold;
     }
-
+ 
     .Tekstboks_plasseringsholder[type="text"],
-
+ 
     .Tekstboks_plasseringsholder[type="email"],
-
+ 
     .Tekstboks_skrift {
         width: 100%;
         padding: 10px;
@@ -286,10 +457,81 @@ body {
         box-sizing: border-box;
     }
 
+@media (max-width: 900px) {
+   .Overskrift_Kontakt {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+   }
+
+   .form {
+        max-width: 600px;
+        height: 380px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid white;
+        border-radius: 8px;
+    }
+ 
+    .Tekstboks_overskrift {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+ 
+    .Tekstboks_plasseringsholder[type="text"],
+ 
+    .Tekstboks_plasseringsholder[type="email"],
+ 
+    .Tekstboks_skrift {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 50px;
+        border: 1px solid white;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 500px) {
+   .Overskrift_Kontakt {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+   }
+
+   .form {
+        max-width: 400px;
+        height: 380px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid white;
+        border-radius: 8px;
+    }
+ 
+    .Tekstboks_overskrift {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+ 
+    .Tekstboks_plasseringsholder[type="text"],
+ 
+    .Tekstboks_plasseringsholder[type="email"],
+ 
+    .Tekstboks_skrift {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 50px;
+        border: 1px solid white;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+}
+
 /* ===============================
    Footer
    =============================== */
-
 
 /* footer for prosjekter */
 .footer_prosjekter {
@@ -299,7 +541,7 @@ body {
     padding: 20px 0; /* Luft over og under teksten */
 }
 
-/*footer for forside og kontakt*/
+/*footer for forside, om meg og kontakt*/
 .footer {
     position: fixed;
     bottom: 0; /*dytter footer ned*/
