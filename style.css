@@ -98,7 +98,7 @@ body {
     text-decoration: none; /* Fjerner understrek */
     padding: 10px 25px; /* Luft rundt teksten */
     border-radius: 25px; /* Runde kanter */
-    font-size: 18px; /* Tekststørrelse */
+    font-size: 23px; /* Tekststørrelse */
     color: white; /* hvit tekst */
 }
 
@@ -153,7 +153,7 @@ body {
     }
  
     .nav_bar a {
-        font-size: 16px;
+        font-size: 25px;
         /* Mindre menytekst */
     }
 }
