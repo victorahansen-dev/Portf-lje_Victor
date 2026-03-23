@@ -18,10 +18,11 @@ body {
     background-color: #006EB3; /* Blå bakgrunnsfarge */
     border-radius: 50px; /* Runde kanter */
     display: flex; /* Aktiverer flexbox for justering */
-    text-align: center; /* Sentrerer elementene horisontalt */
+    justify-content: center; /* Sentrerer elementene horisontalt */
     align-items: center; /* Sentrerer elementene vertikalt */
-    gap: 100px; /* Avstand mellom meny-elementene */
+    gap: 150px; /* Avstand mellom meny-elementene */
     margin: 1% auto; /* Sentrerer menyen og legger til litt toppmarg */
+    box-shadow: 0 0 10px #4a90e2; /* Lager en skinnende effekt på */
 }
 
 /* Tekst i navigasjonsmenyen */
@@ -33,14 +34,11 @@ body {
     color: white; /* hvit tekst */
 }
 
-.nav_bar img {
-    width: 100px;
-    height: 50px;
-    position: relative; /* holder logoen fast på venstre */
-}
-
 .nav_bar a:hover {
     transform: scale(1.1); /* Liten zoom-effekt ved hover */
+    transition-duration: 0.3s;
+    transition-delay: 0.1s;
+    transition-timing-function: ease-out;
 }
 
 /* ===============================
@@ -70,7 +68,7 @@ body {
     height: 300px; /* Bildehøyde */
     border-radius: 50%; /* Gjør bildet rundt */
     object-fit: cover; /* Fyller formen uten å strekke bildet */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Myk skygge bak bildet */
+    box-shadow: 0 0 50px rgba(0, 0, 0, 1); /* Myk skygge bak bildet */
 }
 
 /* ===============================
@@ -107,34 +105,30 @@ body {
 .Kontakt_knapp:hover {
     background-color: #0086D1; /* Lysere blå ved hover */
     transform: scale(1.05); /* Liten zoom-effekt */
+    transition-duration: 0.3s; /* Hvor lenge zoom effekten varer */
+    transition-delay: 0.1s; /* Avsetter zoom effekt med 0,1 sekunder */
+    transition-timing-function: ease-out; /* Legger til en mer naturlig følelse ved hover */
+    box-shadow: 0 0 10px #4a90e2; /* Lager en skinnende effekt ved hover */
 }
 
 /* ===============================
-   For telefon (forside og navbar)
+   Responsivt design (mobil og nettbrett)
    =============================== */
-
-@media (max-width: 500px) {
-    .nav_bar {
-        gap: 28px; /* Mindre mellomrom mellom punktene for mer kompakt design */
-        width: 95%; /* bredde på nav-baren med litt mellomrom på hver side */
-    }
-
-        .Hero_stil {
+ 
+/* For skjermer mindre enn 900px bredde */
+@media (max-width: 900px) {
+ 
+    .Hero_stil {
         flex-direction: column;
         /* Legger bilde over teksten */
         text-align: center;
         /* Sentrerer teksten */
         margin-top: 60px;
         /* Mindre toppmarg */
-        gap: 40px;
+        gap: 30px;
         /* Mindre avstand mellom elementene */
     }
  
-    .nav_bar img {
-    width: 70px;
-    height: 40px;
-    }
-
     .Profil_bilde {
         width: 200px;
         /* Mindre bilde på mobil */
@@ -150,10 +144,40 @@ body {
         font-size: 18px;
         /* Mindre brødtekst */
     }
-
+ 
+    .nav_bar {
+        width: 90%;
+        /* Passer mindre skjermer */
+        gap: 60px;
+        /* Mindre avstand mellom lenkene */
+    }
+ 
     .nav_bar a {
-        font-size: 25px;
+        font-size: 16px;
         /* Mindre menytekst */
+    }
+}
+ 
+/* For veldig små skjermer (under 500px bredde) */
+@media (max-width: 500px) {
+    .nav_bar {
+        flex-direction: column;
+        /* Legger menyen vertikalt */
+        height: auto;
+        /* Justerer høyden automatisk */
+        padding: 10px 0;
+        gap: 20px;
+        /* Mindre mellomrom mellom punktene */
+    }
+ 
+    .Hero_stil {
+        gap: 20px;
+        /* Kompakt layout */
+    }
+ 
+    .Forside_tekst a {
+        font-size: 28px;
+        /* Mindre overskrift for små skjermer */
     }
 }
 
@@ -167,7 +191,7 @@ body {
     width: 800px; /* bredde på boksen */
     display: flex;
     justify-self: center; /* putter boken i midten horisontalt */
-    height: 300px;
+    height: 300px; /*høyde på boksen */
 } 
 
 /*innhold*/
