@@ -3,7 +3,7 @@
    =============================== */
 
 body {
-    background: linear-gradient(90deg, #001a2e 0%, #000000 80%); /* Horisontal blå-til-svart gradient*/
+    background: linear-gradient(90deg, #001a2e 20%, #000000 80%); /* Horisontal blå-til-svart gradient*/
     color: white; /* Hvit tekst */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Hovedfont */
 }
